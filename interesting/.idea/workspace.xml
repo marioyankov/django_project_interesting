@@ -2,30 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bb31ce0-4d27-4753-80a0-ab9159f7b69b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/interesting_db.pVWX_g.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/interesting_db.pVWX_g/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/interesting_db.pVWX_g/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/29067f87-4540-4af5-b5c4-b93659b4b2e8/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/interesting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/interesting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0002_auto_20201118_2337.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/create_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/create_post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/create_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/create_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesting/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/interesting/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesting/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/interesting/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/create_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -38,8 +34,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProgramZ\PythonTutorial\django_project_interesting\interesting\media" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="interesting" type="Python.DjangoServer" factoryName="Django server">
@@ -75,11 +78,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605732826585</updated>
-      <workItem from="1605732845778" duration="459000" />
+      <workItem from="1605732845778" duration="3852000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="911" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605734182592">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="911" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605734182592" />
+    <state width="1152" height="279" key="GridCell.Tab.0.bottom" timestamp="1605736163960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1152" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605736163960" />
+    <state width="1152" height="279" key="GridCell.Tab.0.center" timestamp="1605736163960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1152" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605736163960" />
+    <state width="1152" height="279" key="GridCell.Tab.0.left" timestamp="1605736163960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1152" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605736163960" />
+    <state width="1152" height="279" key="GridCell.Tab.0.right" timestamp="1605736163960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1152" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605736163960" />
+    <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1605734208341">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1605734208341" />
   </component>
 </project>

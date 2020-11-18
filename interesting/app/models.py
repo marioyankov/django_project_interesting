@@ -15,7 +15,7 @@ class Profile(User):
 
 class Post(models.Model):
     image = models.ImageField(
-        upload_to='images/post'
+        upload_to='post'
     )
     description = models.TextField(blank=False)
 

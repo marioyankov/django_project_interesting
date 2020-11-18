@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'interesting',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,3 +133,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     join(BASE_DIR, 'static'),
 )
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = join(BASE_DIR, 'media')

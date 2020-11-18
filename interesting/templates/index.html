@@ -1,3 +1,11 @@
 {% extends 'base.html' %}
 
 {% load static %}
+
+{% block site_content %}
+    <h1 class="text-center">Posts</h1>
+    {% for post in posts %}
+        <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+        <p>{{ post.description }}</p>
+    {% endfor %}
+{% endblock %}

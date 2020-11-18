@@ -1,4 +1,6 @@
-from django_project_interesting.interesting.app.models import Post
+from django import forms
+
+from app.models import Post
 
 
 class CreatePostForm(forms.ModelForm):
