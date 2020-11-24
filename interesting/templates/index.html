@@ -4,8 +4,13 @@
 
 {% block site_content %}
     <h1 class="text-center">Posts</h1>
-    {% for post in posts %}
-        <img src="{{ post.image.url }}" class="card-img-top" alt="...">
-        <p>{{ post.description }}</p>
-    {% endfor %}
+    <ul>
+        {% for post in posts %}
+            <div>
+                <img class="post-image" src="{{ post.image.url }}" alt="{{ post.image.name }}">
+                <p>{{ post.description }}</p>
+            </div>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
