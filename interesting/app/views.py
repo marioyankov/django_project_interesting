@@ -1,6 +1,14 @@
 from django.shortcuts import render, redirect
 
-from app.forms.create_post import CreatePostForm
+from app.forms import CreatePostForm
+from app.models import Post
+
+
+def index(request):
+    context = {
+        'posts': Post.objects.all(),
+    }
+    return render(request, 'index.html', context)
 
 
 def create_post(request):
