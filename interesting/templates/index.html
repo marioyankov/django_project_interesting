@@ -3,14 +3,15 @@
 {% load static %}
 
 {% block site_content %}
-    <h1 class="text-center">Posts</h1>
-    <ul>
-        {% for post in posts %}
-            <div>
-                <img class="post-image" src="{{ post.image.url }}" alt="{{ post.image.name }}">
-                <p>{{ post.description }}</p>
+    <h1 class="text-center">Did you know ?</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% for post in posts %}
+                    <img class="post-image" src="{{ post.image.url }}" alt="{{ post.image.name }}">
+                    <p>{{ post.description }}</p>
+                {% endfor %}
             </div>
-        {% endfor %}
-    </ul>
-
+        </div>
+    </div>
 {% endblock %}

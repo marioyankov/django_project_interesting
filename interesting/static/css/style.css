@@ -1,3 +1,11 @@
-post-image {
+.post-image {
     height: 300px;
+}
+
+.row {
+    display: flex;
+}
+
+.row .col {
+    flex: 50%;
 }
