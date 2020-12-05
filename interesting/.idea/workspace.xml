@@ -2,29 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bb31ce0-4d27-4753-80a0-ab9159f7b69b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0002_auto_20201118_2337.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/fluffy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/post/fluffy_EHez0i1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0004_auto_20201205_1620.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0005_post_post_name.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/sign_up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/post_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms/create_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/create_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/create_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/create_post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesting/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/interesting/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesting/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/interesting/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/create_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/create_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +32,14 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -47,9 +53,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -91,6 +99,15 @@
       <option name="presentableId" value="Default" />
       <updated>1605732826585</updated>
       <workItem from="1605732845778" duration="4136000" />
+      <workItem from="1605813305978" duration="3331000" />
+      <workItem from="1606247546808" duration="3462000" />
+      <workItem from="1606418744943" duration="52000" />
+      <workItem from="1606769773796" duration="2211000" />
+      <workItem from="1606772041145" duration="5000" />
+      <workItem from="1606772959831" duration="56000" />
+      <workItem from="1606852866002" duration="2628000" />
+      <workItem from="1606937245314" duration="3954000" />
+      <workItem from="1607169610592" duration="13544000" />
     </task>
     <servers />
   </component>
@@ -98,29 +115,57 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="911" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605734182592">
+    <state x="673" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606852933150">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="911" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605734182592" />
-    <state width="1152" height="279" key="GridCell.Tab.0.bottom" timestamp="1605737037142">
+    <state x="673" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606852933150" />
+    <state x="972" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606770645946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1152" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605737037142" />
-    <state width="1152" height="279" key="GridCell.Tab.0.center" timestamp="1605737037142">
+    <state x="972" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606770645946" />
+    <state width="1425" height="277" key="GridCell.Tab.0.bottom" timestamp="1607184643422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1152" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605737037142" />
-    <state width="1152" height="279" key="GridCell.Tab.0.left" timestamp="1605737037142">
+    <state width="1425" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
+    <state width="1425" height="277" key="GridCell.Tab.0.center" timestamp="1607184643422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1152" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605737037142" />
-    <state width="1152" height="279" key="GridCell.Tab.0.right" timestamp="1605737037142">
+    <state width="1425" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
+    <state width="1425" height="277" key="GridCell.Tab.0.left" timestamp="1607184643422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1152" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605737037142" />
+    <state width="1425" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
+    <state width="1425" height="277" key="GridCell.Tab.0.right" timestamp="1607184643422">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1425" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
+    <state width="1309" height="344" key="GridCell.Tab.1.bottom" timestamp="1606251042012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1309" height="344" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606251042012" />
+    <state width="1309" height="344" key="GridCell.Tab.1.center" timestamp="1606251042012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1309" height="344" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606251042012" />
+    <state width="1309" height="344" key="GridCell.Tab.1.left" timestamp="1606251042008">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1309" height="344" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606251042008" />
+    <state width="1309" height="344" key="GridCell.Tab.1.right" timestamp="1606251042012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1309" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606251042012" />
     <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1605734208341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1605734208341" />
+    <state x="685" y="165" key="SettingsEditor" timestamp="1606773006789">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606773006789" />
+    <state x="892" y="76" width="585" height="888" key="find.popup" timestamp="1606854904800">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="892" y="76" width="585" height="888" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606854904800" />
   </component>
 </project>

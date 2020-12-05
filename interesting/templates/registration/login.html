@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+    {% load static %}
+    <div class="container">
+        <form class="w-50 m-auto" method="POST" action="{% url 'login' %}">
+            <h1>Sign In</h1>
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-dark">Sign In</button>
+            <span>Don't have an account?
+                <a href="{% url 'sign up user' %}">Sign up</a>
+            </span>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+    {% load static %}
+    <div>
+        <img src="{{ post.image }}" alt="{{ post.post_name }}">
+        <h5><u>Name:</u> {{ post.user.user.username }}</h5>
+        <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
+    </div>
+    <p class="mt-2">Description: {{ post.description }}</p>
+    <div class="box">
+        <form method="post" action="#">
+            {{ form }}
+            {% csrf_token %}
+            <button class="btn btn-primary" type="submit">Add comment</button>
+        </form>
+    </div>
+{% endblock %}
