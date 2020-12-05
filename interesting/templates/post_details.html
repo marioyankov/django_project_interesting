@@ -3,7 +3,7 @@
 {% block site_content %}
     {% load static %}
     <div>
-        <img src="{{ post.image }}" alt="{{ post.post_name }}">
+        <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
         <h5><u>Name:</u> {{ post.user.user.username }}</h5>
         <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
     </div>

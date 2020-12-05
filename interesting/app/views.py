@@ -39,7 +39,7 @@ def post_details_and_comment(request, pk):
     if request.method == 'GET':
         post.likes_count = post.like_set.count()
         context = {
-            'post': Post,
+            'post': post,
             'form': CommentForm(),
             'can_delete': request.user == post.user.user,
             'can_edit': request.user == post.user.user,

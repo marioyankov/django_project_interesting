@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bb31ce0-4d27-4753-80a0-ab9159f7b69b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0004_auto_20201205_1620.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0005_post_post_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/accounts/sign_up.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/post_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8466b786-71fe-4525-9ce9-15db965d31a3/storage_v2/_src_/database/interesting_db.pVWX_g/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesting/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/interesting/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/create_user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post_details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +88,7 @@
       <workItem from="1606852866002" duration="2628000" />
       <workItem from="1606937245314" duration="3954000" />
       <workItem from="1607169610592" duration="13544000" />
+      <workItem from="1607184666884" duration="184000" />
     </task>
     <servers />
   </component>
@@ -123,22 +104,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="972" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606770645946" />
-    <state width="1425" height="277" key="GridCell.Tab.0.bottom" timestamp="1607184643422">
+    <state width="1425" height="277" key="GridCell.Tab.0.bottom" timestamp="1607184852044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
-    <state width="1425" height="277" key="GridCell.Tab.0.center" timestamp="1607184643422">
+    <state width="1425" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607184852044" />
+    <state width="1425" height="277" key="GridCell.Tab.0.center" timestamp="1607184852044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
-    <state width="1425" height="277" key="GridCell.Tab.0.left" timestamp="1607184643422">
+    <state width="1425" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607184852044" />
+    <state width="1425" height="277" key="GridCell.Tab.0.left" timestamp="1607184852043">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
-    <state width="1425" height="277" key="GridCell.Tab.0.right" timestamp="1607184643422">
+    <state width="1425" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607184852043" />
+    <state width="1425" height="277" key="GridCell.Tab.0.right" timestamp="1607184852044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1425" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607184643422" />
+    <state width="1425" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607184852044" />
     <state width="1309" height="344" key="GridCell.Tab.1.bottom" timestamp="1606251042012">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
