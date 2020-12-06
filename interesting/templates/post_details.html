@@ -8,6 +8,19 @@
         <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
     </div>
     <p class="mt-2">Description: {{ post.description }}</p>
+    <div>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li>
+                <a href="#">Delete</a>
+            </li>
+            <li>
+                <a href="#">Edit</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
     <div class="box">
         <form method="post" action="#">
             {{ form }}

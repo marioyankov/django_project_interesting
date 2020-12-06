@@ -32,7 +32,14 @@ def sign_up_user(request):
 
 
 def user_profile(request, pk=None):
-    pass
+    user = request.user
+    if request.method == 'GET':
+        context = {
+            'user': user,
+        }
+        return render(request, 'accounts/user_profile.html', context)
+    else:
+        pass
 
 
 def sign_out_user(request):

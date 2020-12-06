@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from app.forms import CreatePostForm, CommentForm
@@ -11,6 +12,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+@login_required
 def create_post(request):
     if request.method == 'GET':
         context = {
@@ -33,6 +35,7 @@ def create_post(request):
         return render(request, 'index.html', context)
 
 
+@login_required
 def post_details_and_comment(request, pk):
     post = Post.objects.get(pk=pk)
 
@@ -66,6 +69,7 @@ def post_details_and_comment(request, pk):
         return render(request, 'post_details.html', context)
 
 
+@login_required
 def like_post(request, pk):
     like = Like.objects.filter(user_id=request.user.userprofile.id, post_id=pk).first()
     if like:
@@ -76,3 +80,8 @@ def like_post(request, pk):
         like.post = post
         like.save()
     return redirect('post details', pk)
+
+
+@login_required
+def delete_post(request, pk):
+    pass
