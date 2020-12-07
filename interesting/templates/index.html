@@ -8,9 +8,14 @@
         <div class="row">
             <div class="col-lg-6">
                 {% for post in posts %}
-                    <img class="post-image" src="{{ post.image.url }}" alt="{{ post.image.name }}">
-                    <p>{{ post.description }}</p>
-                    <a href="{% url 'post details' post.pk %}">Details</a>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.image.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.post_name }}</h5>
+                            <p class="card-text">{{ post.description }}</p>
+                        </div>
+                        <a href="{% url 'post details' post.pk %}" class="btn btn-primary">Details</a>
+                    </div>
                 {% endfor %}
             </div>
         </div>
