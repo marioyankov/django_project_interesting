@@ -3,6 +3,14 @@
 {% block site_content %}
     {% load static %}
     <div class="text-center">
-        <h1>Hello, {{ user.username }}</h1>
-    </div>
+    <h1>Hello, {{ profile_user.username }}</h1>
+    {% if profile.profile_picture %}
+        <img class="rounded-circle mb-3" src="{{ profile.profile_picture.url }}" alt="Generic placeholder image"
+             width="140"
+             height="140">
+    {% else %}
+        <img class="rounded-circle mb-3" src="https://thumbs.dreamstime.com/b/anonymous-user-icon-person-business-suit-question-mark-internet-security-concept-vector-illustration-88848107.jpg"
+             alt="Generic placeholder image" width="140"
+             height="140">
+    {% endif %}
 {% endblock %}

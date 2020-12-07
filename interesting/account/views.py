@@ -1,4 +1,5 @@
 from django.contrib.auth import login, logout
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
 from account.forms import SignUpForm
@@ -32,10 +33,12 @@ def sign_up_user(request):
 
 
 def user_profile(request, pk=None):
-    user = request.user
+    user = request.user if pk is None else User.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
-            'user': user,
+            'profile_user': user,
+            'profile': user.userprofile,
+            'posts': user.userprofile.post_set.all(),
         }
         return render(request, 'accounts/user_profile.html', context)
     else:
