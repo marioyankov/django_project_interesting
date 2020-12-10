@@ -6,7 +6,7 @@
         <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
     </div>
     <div>
-        <h5><u>Name:</u> {{ post.user.user.username }}</h5>
+        <h5><u>Name:</u> {{ post.post_name }}</h5>
         <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
     </div>
     <p class="mt-2">Description: {{ post.description }}</p>
@@ -30,7 +30,7 @@
         {% if post.comment_set.exists %}
             {% for comment in post.comment_set.all %}
                 <div class="box">
-                    <a href="{% url 'user profile' comment.user_id %}">{{ comment.user.user.username }}</a>
+                    <a href="{% url 'user profile' comment.user.user_id %}">{{ comment.user.user.username }}</a>
                     <h5><em>{{ comment.text }}</em></h5>
                     <hr>
                 </div>

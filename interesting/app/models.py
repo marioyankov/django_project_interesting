@@ -13,6 +13,9 @@ class Post(models.Model):
 
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.post_name
+
 
 class Like(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)

@@ -1,5 +1,5 @@
 from django.contrib.auth import login, logout
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
 
 from account.forms import SignUpForm
@@ -21,6 +21,7 @@ def sign_up_user(request):
             profile = UserProfile(
                 user=user,
             )
+            profile.user.groups.add(Group.objects.get(name='UserGroup'))
             profile.save()
             login(request, user)
             return redirect('index')

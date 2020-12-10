@@ -2,6 +2,7 @@ import os
 
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.views.generic import ListView
 
 from app.forms import CreatePostForm, CommentForm
 from app.models import Post, Comment, Like
@@ -12,6 +13,13 @@ def index(request):
         'posts': Post.objects.all(),
     }
     return render(request, 'index.html', context)
+
+#
+# class IndexListView(ListView):
+#     model = Post
+#     paginate_by = 4
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
 
 
 def create_or_edit_post(request, post, template):
@@ -31,7 +39,9 @@ def create_or_edit_post(request, post, template):
         if form.is_valid():
             if old_image:
                 os.remove(old_image.path)
-            form.save()
+            post = form.save(commit=False)
+            post.user = request.user.userprofile
+            post.save()
             return redirect('post details', post.pk)
 
         context = {
@@ -57,11 +67,11 @@ def post_details_and_comment(request, pk):
         context = {
             'post': post,
             'form': CommentForm(),
-            'can_delete': request.user == post.user.user,
-            'can_edit': request.user == post.user.user,
+            'can_delete': request.user == post.user.user or request.user.is_staff,
+            'can_edit': request.user == post.user.user or request.user.is_staff,
             'can_like': request.user != post.user.user,
             'has_liked': post.like_set.filter(user_id=request.user.userprofile.id).exists(),
-            'can_comment': request.user != post.user.user,
+            'can_comment': request.user != post.user.user or request.user.is_staff,
         }
 
         return render(request, 'post_details.html', context)
@@ -89,15 +99,46 @@ def like_post(request, pk):
         like.delete()
     else:
         post = Post.objects.get(pk=pk)
-        like = Like(post=request.post, user=request.user.userprofile)
+        like = Like(user=request.user.userprofile)
         like.post = post
         like.save()
     return redirect('post details', pk)
 
+#
+# @login_required
+# def edit_post(request, pk):
+#     post = Post.objects.get(pk=pk)
+#     return create_or_edit_post(request, post, 'post_edit')
 
 def edit_post(request, pk):
     post = Post.objects.get(pk=pk)
-    return create_or_edit_post(request, post, 'post_edit')
+    if request.method == 'GET':
+        form = CreatePostForm(instance=post)
+
+        context = {
+            'form': form,
+            'post': post,
+        }
+
+        return render(request, 'post_edit.html', context)
+
+    else:
+        old_image = post.image
+        form = CreatePostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            if old_image:
+                os.remove(old_image.path)
+            post = form.save(commit=False)
+            post.save()
+            return redirect('post details', post.pk)
+
+        context = {
+            'form': form,
+            'post': post,
+        }
+
+        return render(request, 'post_details.html', context)
+
 
 
 @login_required

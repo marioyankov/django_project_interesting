@@ -5,6 +5,7 @@ from app.views import index, create_post, post_details_and_comment, edit_post, d
 
 urlpatterns = [
     path('', index, name='index'),
+    # path('index/', IndexListView.as_view(), name='cbv index'),
     path('create_post/', create_post, name='create post'),
     path('post_details/<int:pk>/', post_details_and_comment, name='post details'),
     path('edit/<int:pk>', edit_post, name='edit post'),

@@ -12,8 +12,7 @@ class CreatePostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = '__all__'
-        # exclude = ['user']
+        exclude = ['user']
 
 
 class CommentForm(forms.Form):
