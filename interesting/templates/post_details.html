@@ -2,27 +2,47 @@
 
 {% block site_content %}
     {% load static %}
-    <div>
+    <div class="d-flex">
         <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
+    </div>
+    <div>
         <h5><u>Name:</u> {{ post.user.user.username }}</h5>
         <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
     </div>
     <p class="mt-2">Description: {{ post.description }}</p>
     <div>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li>
-                <a href="#">Delete</a>
-            </li>
-            <li>
-                <a href="#">Edit</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-            </li>
-        </ul>
+        {% if can_edit %}
+            <a href="{% url 'edit post' post.pk %}">Edit</a>
+        {% endif %}
+        {% if can_delete %}
+            <a href="{% url 'delete post' post.pk %}">Delete</a>
+        {% endif %}
+        {% if can_like %}
+            {% if has_liked %}
+                <a href="{% url 'like post' post.pk %}"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            {% else %}
+                <a href="{% url 'like post' post.pk %}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+            {% endif %}
+        {% endif %}
+        <p class="mt-2">Likes: {{ post.likes_count }}</p>
+    </div>
+    <div class="d-block" style="background-color: #f1e3e3; padding:2%">
+        {% if post.comment_set.exists %}
+            {% for comment in post.comment_set.all %}
+                <div class="box">
+                    <a href="{% url 'user profile' comment.user_id %}">{{ comment.user.user.username }}</a>
+                    <h5><em>{{ comment.text }}</em></h5>
+                    <hr>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="box">
+                <h3>There are no comments for this pet. </h3>
+            </div>
+        {% endif %}
     </div>
     <div class="box">
-        <form method="post" action="#">
+        <form method="post" action="{% url 'post details' post.pk %}">
             {{ form }}
             {% csrf_token %}
             <button class="btn btn-primary" type="submit">Add comment</button>

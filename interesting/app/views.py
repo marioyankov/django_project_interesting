@@ -1,3 +1,5 @@
+import os
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
@@ -12,27 +14,38 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-@login_required
-def create_post(request):
+def create_or_edit_post(request, post, template):
     if request.method == 'GET':
-        context = {
-            'form': CreatePostForm(),
-        }
-        return render(request, 'create_post.html', context)
-    else:
-        form = CreatePostForm(
-            request.POST,
-            request.FILES,
-        )
-        if form.is_valid():
-            form.save()
-            return redirect('index')
+        form = CreatePostForm(instance=post)
 
         context = {
             'form': form,
+            'post': post,
         }
 
-        return render(request, 'index.html', context)
+        return render(request, f'{template}.html', context)
+
+    else:
+        old_image = post.image
+        form = CreatePostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            if old_image:
+                os.remove(old_image.path)
+            form.save()
+            return redirect('post details', post.pk)
+
+        context = {
+            'form': form,
+            'post': post,
+        }
+
+        return render(request, f'{template}.html', context)
+
+
+@login_required
+def create_post(request):
+    post = Post()
+    return create_or_edit_post(request, post, 'create_post')
 
 
 @login_required
@@ -53,7 +66,7 @@ def post_details_and_comment(request, pk):
 
         return render(request, 'post_details.html', context)
     else:
-        form = CommentForm(request.POST, request.FILES)
+        form = CommentForm(request.POST)
 
         if form.is_valid():
             comment = Comment(text=form.cleaned_data['text'], )
@@ -82,6 +95,21 @@ def like_post(request, pk):
     return redirect('post details', pk)
 
 
+def edit_post(request, pk):
+    post = Post.objects.get(pk=pk)
+    return create_or_edit_post(request, post, 'post_edit')
+
+
 @login_required
 def delete_post(request, pk):
-    pass
+    post = Post.objects.get(pk=pk)
+    if request.method == 'GET':
+        context = {
+            'post': post,
+        }
+
+        return render(request, 'post_delete.html', context)
+
+    else:
+        post.delete()
+        return redirect('index')

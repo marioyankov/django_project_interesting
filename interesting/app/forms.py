@@ -17,8 +17,10 @@ class CreatePostForm(forms.ModelForm):
 
 
 class CommentForm(forms.Form):
-    text = forms.Textarea(
-        attrs={
-            'class': 'form-control rounded-2',
-        }
+    text = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'class': 'form-control rounded-2',
+            }
+         )
     )
