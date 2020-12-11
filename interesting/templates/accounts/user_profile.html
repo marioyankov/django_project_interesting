@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
+{% block title %}interesTing{% endblock %}
+{% load static %}
 {% block site_content %}
-    {% load static %}
     <div class="text-center">
     <h1>Hello, {{ profile_user.username }}</h1>
     {% if profile.profile_picture %}
@@ -13,4 +14,11 @@
              alt="Generic placeholder image" width="140"
              height="140">
     {% endif %}
+    <div class="w-50 m-auto">
+            <form action="#" method="post" enctype="multipart/form-data">
+                {{ form }}
+                {% csrf_token %}
+                <button class="btn btn-primary">Upload</button>
+            </form>
+        </div>
 {% endblock %}

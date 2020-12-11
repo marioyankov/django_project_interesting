@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
+{% block title %}interesTing{% endblock %}
 {% block site_content %}
     {% load static %}
+    <h1 class="text-center">{{ post.post_name }}</h1>
     <div class="d-flex">
         <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
     </div>
     <div>
-        <h5><u>Name:</u> {{ post.post_name }}</h5>
         <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
     </div>
     <p class="mt-2">Description: {{ post.description }}</p>

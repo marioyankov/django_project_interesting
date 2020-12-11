@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
+{% block title %}interesTing{% endblock %}
 {% block site_content %}
     <h1 class="text-center">Did you know ?</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                {% for post in posts %}
+                {% for post in post_list %}
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.image.name }}">
                         <div class="card-body">

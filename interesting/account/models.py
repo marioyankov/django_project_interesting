@@ -10,9 +10,9 @@ class UserProfile(models.Model):
         upload_to='profiles',
         blank=True,
     )
-    first_name = models.CharField
-    last_name = models.CharField
-    birth_date = models.DateTimeField
+    first_name = models.CharField(max_length=30, null=True)
+    last_name = models.CharField(max_length=30, null=True)
+    birth_date = models.DateField(blank=True, null=True, default='2020-01-01')
 
     def __str__(self):
         return self.user.username

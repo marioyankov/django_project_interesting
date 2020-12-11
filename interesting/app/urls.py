@@ -1,11 +1,10 @@
-from django.conf.urls.static import static
 from django.urls import path
 
-from app.views import index, create_post, post_details_and_comment, edit_post, delete_post, like_post
+from app.views import create_post, post_details_and_comment, edit_post, delete_post, like_post, IndexListView
 
 urlpatterns = [
-    path('', index, name='index'),
-    # path('index/', IndexListView.as_view(), name='cbv index'),
+    # path('', index, name='index'),
+    path('', IndexListView.as_view(), name='index'),
     path('create_post/', create_post, name='create post'),
     path('post_details/<int:pk>/', post_details_and_comment, name='post details'),
     path('edit/<int:pk>', edit_post, name='edit post'),

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}interesTing{% endblock %}
+{% load static %}
+{% block site_content %}
+    <form method="post" class="furniture-form" enctype="multipart/form-data">
+            {{ form.first_name}}
+            {{ form.last_name}}
+            {% csrf_token %}
+        <button class="btn btn-primary mt-2" type="submit">Post</button>
+    </form>
+{% endblock %}

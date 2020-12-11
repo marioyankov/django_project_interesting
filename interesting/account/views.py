@@ -2,7 +2,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
 
-from account.forms import SignUpForm
+from account.forms import SignUpForm, UserProfileForm
 from account.models import UserProfile
 
 
@@ -37,13 +37,19 @@ def user_profile(request, pk=None):
     user = request.user if pk is None else User.objects.get(pk=pk)
     if request.method == 'GET':
         context = {
+            'form': UserProfileForm(),
             'profile_user': user,
             'profile': user.userprofile,
             'posts': user.userprofile.post_set.all(),
         }
         return render(request, 'accounts/user_profile.html', context)
     else:
-        pass
+        form = UserProfileForm(request.POST, request.FILES, instance=user.userprofile)
+        if form.is_valid():
+            form.save()
+            return redirect('current user profile')
+
+        return redirect('current user profile')
 
 
 def sign_out_user(request):

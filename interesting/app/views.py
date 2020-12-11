@@ -8,18 +8,10 @@ from app.forms import CreatePostForm, CommentForm
 from app.models import Post, Comment, Like
 
 
-def index(request):
-    context = {
-        'posts': Post.objects.all(),
-    }
-    return render(request, 'index.html', context)
-
-#
-# class IndexListView(ListView):
-#     model = Post
-#     paginate_by = 4
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
+class IndexListView(ListView):
+    template_name = 'index.html'
+    model = Post
+    paginate_by = 4
 
 
 def create_or_edit_post(request, post, template):
@@ -104,6 +96,7 @@ def like_post(request, pk):
         like.save()
     return redirect('post details', pk)
 
+
 #
 # @login_required
 # def edit_post(request, pk):
@@ -138,7 +131,6 @@ def edit_post(request, pk):
         }
 
         return render(request, 'post_details.html', context)
-
 
 
 @login_required
