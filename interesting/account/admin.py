@@ -3,4 +3,9 @@ from django.contrib import admin
 # Register your models here.
 from account.models import UserProfile
 
-admin.site.register(UserProfile)
+
+class ViewUser(admin.ModelAdmin):
+    list_display = ('id', 'user')
+
+
+admin.site.register(UserProfile, ViewUser)
