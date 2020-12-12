@@ -2,8 +2,8 @@
 
 {% block title %}interesTing{% endblock %}
 
+{% load static %}
 {% block site_content %}
-    {% load static %}
     <div class="container-fluid">
         <div class="row d-flex justify-content-center">
             <form method="POST" class="form" action="{% url 'sign up user' %}">
@@ -11,10 +11,13 @@
                 {% csrf_token %}
                 {{ form }}
                 <button type="submit" class="btn btn-dark">Submit</button>
-                <span>Do you have an account?
-                    <a href="#">Sign in</a>
-                </span>
+
             </form>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <span>Do you have an account?
+                <a class="btn btn-danger" href="{% url 'login' %}">Sign in</a>
+            </span>
         </div>
     </div>
 {% endblock %}

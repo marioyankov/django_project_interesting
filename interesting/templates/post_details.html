@@ -4,49 +4,49 @@
 {% block site_content %}
     {% load static %}
     <h1 class="text-center">{{ post.post_name }}</h1>
-    <div class="card-body" style="width: 400px;">
-        <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
-    </div>
-    <div>
-        <h5><u>Owner:</u> {{ post.user.user.username }}</h5>
-    </div>
-    <p class="mt-2">Description: {{ post.description }}</p>
-    <div>
-        {% if can_edit %}
-            <a href="{% url 'edit post' post.pk %}" class="btn btn-primary btn-lg">Edit</a>
-        {% endif %}
-        {% if can_delete %}
-            <a href="{% url 'delete post' post.pk %}" class="btn btn-primary btn-lg">Delete</a>
-        {% endif %}
-        {% if can_like %}
-            {% if has_liked %}
-                <a href="{% url 'like post' post.pk %}"><i class="fa fa-heart" aria-hidden="true"></i></a>
-            {% else %}
-                <a href="{% url 'like post' post.pk %}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+    <div class="container">
+        <div class="card flex-row flex-wrap">
+            <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
+        </div>
+        <div class="card-block px-2">
+            <h4 class="card-tittle"><u>Owner:</u> {{ post.user.user.username }}</h4>
+            <p class="card-text">Description: {{ post.description }}</p>
+            {% if can_edit %}
+                <a href="{% url 'edit post' post.pk %}" class="btn btn-dark btn-lg">Edit</a>
             {% endif %}
-        {% endif %}
-        <p class="mt-2">Likes: {{ post.likes_count }}</p>
-    </div>
-    <div class="d-block" style="background-color: #f1e3e3; padding:2%">
-        {% if post.comment_set.exists %}
-            {% for comment in post.comment_set.all %}
+            {% if can_delete %}
+                <a href="{% url 'delete post' post.pk %}" class="btn btn-dark btn-lg">Delete</a>
+            {% endif %}
+            {% if can_like %}
+                {% if has_liked %}
+                    <a href="{% url 'like post' post.pk %}"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></a>
+                {% else %}
+                    <a href="{% url 'like post' post.pk %}"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i></a>
+                {% endif %}
+            {% endif %}
+            <p class="mt-2">Likes: {{ post.likes_count }}</p>
+        </div>
+        <div class="d-block" style="background-color: thistle; padding:2%">
+            {% if post.comment_set.exists %}
+                {% for comment in post.comment_set.all %}
+                    <div class="box">
+                        <a class="btn btn-danger" href="{% url 'user profile' comment.user.user_id %}">{{ comment.user.user.username }}</a>
+                        <h5><em>{{ comment.text }}</em></h5>
+                        <hr>
+                    </div>
+                {% endfor %}
+            {% else %}
                 <div class="box">
-                    <a href="{% url 'user profile' comment.user.user_id %}">{{ comment.user.user.username }}</a>
-                    <h5><em>{{ comment.text }}</em></h5>
-                    <hr>
+                    <h3>There are no comments for this post. </h3>
                 </div>
-            {% endfor %}
-        {% else %}
-            <div class="box">
-                <h3>There are no comments for this pet. </h3>
-            </div>
-        {% endif %}
-    </div>
-    <div class="box">
-        <form method="post" action="{% url 'post details' post.pk %}">
-            {{ form }}
-            {% csrf_token %}
-            <button class="btn btn-primary btn-lg" type="submit">Add comment</button>
-        </form>
+            {% endif %}
+        </div>
+        <div class="box">
+            <form method="post" action="{% url 'post details' post.pk %}">
+                {{ form }}
+                {% csrf_token %}
+                <button class="btn btn-dark btn-lg btn-block" type="submit">Add you're comment</button>
+            </form>
+        </div>
     </div>
 {% endblock %}

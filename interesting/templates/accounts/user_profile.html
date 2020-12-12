@@ -19,21 +19,19 @@
              alt="Generic placeholder image" width="140"
              height="140">
     {% endif %}
-    <li class="nav-item active">
-        <a href="{% url 'edit profile' user.pk %}" class="btn btn-primary">Update</a>
-    </li>
+        <a href="{% url 'edit profile' user.pk %}" class="btn btn-dark btn-lg">Update Profile Info</a>
     {% if posts %}
         <h3 class="text-center">Here are you're posts.</h3>
         <div class="container">
-            <div class="card-text-center">
+            <div class="card text-center">
                 {% for post in posts %}
                     <div class="card-header">
-                        <h5 class="card-title">{{ post.post_name }}</h5>
+                        <h2 class="card-title text-centre">{{ post.post_name }}</h2>
                     </div>
-                    <div class="card-body" style="width: 400px;">
-                        <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.image.name }}">
-                        <p class="card-text">{{ post.description }}</p>
-                        <a href="{% url 'post details' post.pk %}" class="btn btn-primary btn-lg btn-block">Details</a>
+                    <div class="card-body">
+                        <img class="rounded mx-auto d-block" src="{{ post.image.url }}" alt="{{ post.image.name }}">
+                        <h3 class="card-text">{{ post.description }}</h3>
+                        <a href="{% url 'post details' post.pk %}" class="btn btn-dark btn-lg btn-block">Details</a>
                     </div>
                 {% endfor %}
             </div>

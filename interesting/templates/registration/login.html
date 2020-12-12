@@ -2,17 +2,23 @@
 
 {% block title %}interesTing{% endblock %}
 
+{% load static %}
 {% block site_content %}
-    {% load static %}
-    <div class="container">
-        <form class="w-50 m-auto" method="POST" action="{% url 'login' %}">
-            <h1>Sign In</h1>
-            {% csrf_token %}
-            {{ form }}
-            <button type="submit" class="btn btn-dark">Sign In</button>
-            <span>Don't have an account?
-                <a href="{% url 'sign up user' %}">Sign up</a>
-            </span>
-        </form>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <form class="form" method="POST" action="{% url 'login' %}">
+                <h1 class="text-center">Sign In</h1>
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-dark">Sign In</button>
+            </form>
+        </div>
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <span>Don't have an account?
+                    <a class="btn btn-danger" href="{% url 'sign up user' %}">Sign up</a>
+                </span>
+            </div>
+        </div>
     </div>
 {% endblock %}

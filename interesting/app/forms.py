@@ -8,7 +8,7 @@ class CreatePostForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
         for (_, field) in self.fields.items():
-            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['class'] = 'form-control rounded-2'
 
     class Meta:
         model = Post
