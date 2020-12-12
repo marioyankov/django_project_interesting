@@ -1,21 +1,21 @@
-# django_project_interesting
+### django_project_interesting
 
-personal django project
+#### Personal django project
 This project is something like social website about interesting facts.
 
-# Motivation
+### Motivation
 The motivation behind this project is all about interesting info and interesting facts all around us that we didn't know.
 
-# Build status
+### Build status
 Under construction
 
-# Tech/framework used
+### Tech/framework used
 Django
 Python
 HTML
 
-# Built with
+### Built with
 Django
 
-# Features
+### Features
 What makes your project stand out?
