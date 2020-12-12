@@ -21,5 +21,5 @@ class CommentForm(forms.Form):
             attrs={
                 'class': 'form-control rounded-2',
             }
-         )
+        )
     )
