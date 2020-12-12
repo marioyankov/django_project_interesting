@@ -3,10 +3,12 @@
 {% block title %}interesTing{% endblock %}
 {% load static %}
 {% block site_content %}
-    <form method="post" class="furniture-form" enctype="multipart/form-data">
-            {{ form.first_name}}
-            {{ form.last_name}}
+    <div class="w-50 m-auto">
+        <h1>Hello, {{ user.user.username }}</h1>
+        <form method="post" class="furniture-form" enctype="multipart/form-data">
+            {{ form }}
             {% csrf_token %}
-        <button class="btn btn-primary mt-2" type="submit">Post</button>
-    </form>
+            <button class="btn btn-primary">Upload</button>
+        </form>
+    </div>
 {% endblock %}

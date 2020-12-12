@@ -47,9 +47,39 @@ def user_profile(request, pk=None):
         form = UserProfileForm(request.POST, request.FILES, instance=user.userprofile)
         if form.is_valid():
             form.save()
-            return redirect('current user profile')
+            return redirect('user profile')
 
-        return redirect('current user profile')
+        context = {
+            'form': form,
+        }
+
+        return render(request, 'accounts/edit_profile.html', context)
+
+
+def edit_profile(request, pk):
+    user = request.user if pk is None else User.objects.get(pk=pk)
+    # user = request.user.userprofile
+    if request.method == 'GET':
+        form = UserProfileForm(instance=user.userprofile)
+        context = {
+            'user': user,
+            'form': form,
+        }
+
+        return render(request, 'accounts/edit_profile.html', context)
+
+    else:
+        form = UserProfileForm(request.POST, request.FILES, instance=user.userprofile)
+        if form.is_valid():
+            form.save()
+            return redirect('user profile')
+
+        context = {
+            'user': user,
+            'form': form,
+        }
+
+        return render(request, 'accounts/edit_profile.html', context)
 
 
 def sign_out_user(request):

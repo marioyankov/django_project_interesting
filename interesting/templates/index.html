@@ -5,19 +5,24 @@
 {% block site_content %}
     <h1 class="text-center">Did you know ?</h1>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                {% for post in post_list %}
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.image.name }}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ post.post_name }}</h5>
-                            <p class="card-text">{{ post.description }}</p>
-                        </div>
-                        <a href="{% url 'post details' post.pk %}" class="btn btn-primary">Details</a>
-                    </div>
-                {% endfor %}
-            </div>
+        <div class="card-text-center">
+            {% for post in post_list %}
+                <div class="card-header">
+                    <h5 class="card-title">{{ post.post_name }}</h5>
+                </div>
+                <div class="card-body" style="width: 400px;">
+                    <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.image.name }}">
+                    <p class="card-text">{{ post.description }}</p>
+                    <a href="{% url 'post details' post.pk %}" class="btn btn-primary btn-lg btn-block">Details</a>
+                </div>
+            {% endfor %}
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+            {% endif %}
+            {{ page_obj.number }}
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

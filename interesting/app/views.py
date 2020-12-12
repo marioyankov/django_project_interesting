@@ -11,7 +11,7 @@ from app.models import Post, Comment, Like
 class IndexListView(ListView):
     template_name = 'index.html'
     model = Post
-    paginate_by = 4
+    paginate_by = 2
 
 
 def create_or_edit_post(request, post, template):

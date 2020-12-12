@@ -4,7 +4,7 @@
 {% block site_content %}
     {% load static %}
     <h1 class="text-center">{{ post.post_name }}</h1>
-    <div class="d-flex">
+    <div class="card-body" style="width: 400px;">
         <img src="{{ post.image.url }}" alt="{{ post.post_name }}">
     </div>
     <div>
@@ -13,10 +13,10 @@
     <p class="mt-2">Description: {{ post.description }}</p>
     <div>
         {% if can_edit %}
-            <a href="{% url 'edit post' post.pk %}">Edit</a>
+            <a href="{% url 'edit post' post.pk %}" class="btn btn-primary btn-lg">Edit</a>
         {% endif %}
         {% if can_delete %}
-            <a href="{% url 'delete post' post.pk %}">Delete</a>
+            <a href="{% url 'delete post' post.pk %}" class="btn btn-primary btn-lg">Delete</a>
         {% endif %}
         {% if can_like %}
             {% if has_liked %}
@@ -46,7 +46,7 @@
         <form method="post" action="{% url 'post details' post.pk %}">
             {{ form }}
             {% csrf_token %}
-            <button class="btn btn-primary" type="submit">Add comment</button>
+            <button class="btn btn-primary btn-lg" type="submit">Add comment</button>
         </form>
     </div>
 {% endblock %}
