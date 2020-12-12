@@ -16,6 +16,3 @@ HTML
 
 ### Built with
 Django
-
-### Features
-What makes your project stand out?
