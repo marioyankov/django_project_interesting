@@ -13,6 +13,4 @@ Under construction
 Django
 Python
 HTML
-
-### Built with
-Django
+Bootstrap
